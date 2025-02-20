@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + TS</title>
+  </head>
+  <body class="container bg-dark">
+    <h1 class="text-center display-1 text-light m-5">My Owned Games</h1>
+    <div class="d-flex justify-content-center">
+      <div class="row form-group card mb-3 bg-light w-100">
+        <h3 class="m-3 card-title">Add a new game:</h3>
+        <div class="card-body">
+          <div class="col-sm">
+            <label for="game-title" class="form-label">Game Title:</label>
+            <input
+              type="text"
+              id="game-title"
+              class="form-control"
+              placeholder="Game Title"
+              required
+            />
+          </div>
+          <div class="col">
+            <label for="release-year" class="form-label">Release Year:</label>
+            <input
+              type="text"
+              id="game-year"
+              class="form-control"
+              placeholder="Release Year"
+              required
+            />
+          </div>
+          <div class="col">
+            <label for="review" class="form-label">Review:</label>
+            <textarea id="review" class="form-control" rows="3"></textarea>
+          </div>
+          <div class="col">
+            <button id="add-game-btn" class="btn btn-primary form-control">
+              Add Game
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="card" class="justify-content-center"></div>
+    <div class="d-flex justify-content-center">
+      <div id="edit-card" class="card bg-light w-100 invisible">
+        <h4 class="m-3">Edit Game:</h4>
+        <div class="m-3">
+          <label for="edit-title" class="form-label">Game Title:</label>
+          <input type="text" id="edit-title" class="form-control" />
+          <label for="edit-year" class="form-label">Release Year:</label>
+          <input type="text" id="edit-year" class="form-control" />
+          <label for="edit-review" class="form-label">Review:</label>
+          <textarea
+            id="edit-review"
+            class="form-control mb-3"
+            row="3"
+          ></textarea>
+          <div class="d-flex">
+            <button
+              id="save-edit-btn"
+              class="btn btn-primary form-control"
+            >
+              Save
+            </button>
+            <button id="cancel-edit-btn" class="btn btn-secondary form-control">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

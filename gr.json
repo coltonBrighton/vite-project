@@ -1,0 +1,16 @@
+{
+  "game": [
+    {
+      "id": 1,
+      "name": "Cyberpunk 2077",
+      "year": "2020",
+      "review": "10/10 perfect game"
+    },
+    {
+      "id": 2,
+      "name": "Elden Ring",
+      "year": "2022",
+      "review": "10/10 need a new keyboard though!"
+    }
+  ]
+}
