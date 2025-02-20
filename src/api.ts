@@ -1,12 +1,12 @@
 
-
+// function to fetch reviews from json-server
 export async function getReviews() {
   // grab game data
   const response = await fetch("http://localhost:3000/game");
   // parse to json
   return response.json()
 }
-// 
+// function to add review to gr.json
 export async function postReviews() {
   const newGame = {
     name: (<HTMLInputElement>document.getElementById("game-title")).value ,
@@ -25,7 +25,7 @@ export async function postReviews() {
 
   return newGameAndId
 }
-
+// function to edit data in gr.json
 export async function putReviews(gameId: number) {
   const updatedGame = {
     name: (<HTMLInputElement>document.getElementById("edit-title")).value ,
@@ -42,7 +42,7 @@ export async function putReviews(gameId: number) {
   });
   return updatedGame;
 }
-
+// function to delete data from gr.json
 export async function deleteReview(gameId: number) {
   await fetch(`http://localhost:3000/game/${gameId}`, {
     method: "DELETE",
